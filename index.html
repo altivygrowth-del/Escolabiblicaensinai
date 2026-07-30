@@ -46,9 +46,8 @@
             padding: 0 20px;
         }
 
-        /* --- HEADER / HERO SECTION COM IMAGEM DE FUNDO E ESPAÇAMENTO AJUSTADO --- */
+        /* --- HEADER / HERO SECTION COM IMAGEM DE FUNDO --- */
         header {
-            /* Garante que o conteúdo fique abaixo do logo/data da arte */
             padding-top: 280px; 
             padding-bottom: 60px;
             text-align: center;
@@ -168,18 +167,21 @@
         }
 
         .speakers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
         }
 
         .speaker-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
             transition: transform 0.3s ease;
+            width: 280px;
         }
 
         .speaker-card:hover {
@@ -188,8 +190,8 @@
         }
 
         .speaker-img {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 15px;
@@ -264,7 +266,39 @@
             margin-top: 10px;
         }
 
-        /* --- FOOTER E LOCALIZAÇÃO --- */
+        /* --- SEÇÃO COMO CHEGAR --- */
+        .location-section {
+            padding: 60px 0;
+            text-align: center;
+            background: rgba(10, 31, 68, 0.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .map-wrapper {
+            margin-top: 25px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 380px;
+            border: 0;
+            display: block;
+        }
+
+        .location-address {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        /* --- FOOTER --- */
         footer {
             padding: 40px 0;
             text-align: center;
@@ -273,16 +307,8 @@
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .info-location {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
         .org-logos {
-            margin-top: 20px;
+            margin-top: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -296,6 +322,7 @@
         @media (max-width: 768px) {
             header { padding-top: 200px; }
             .form-container { padding: 25px; }
+            .speakers-grid { gap: 20px; }
         }
     </style>
 </head>
@@ -334,27 +361,15 @@
             <div class="speakers-grid">
                 <!-- Preletor 1 -->
                 <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150" alt="Pr. Natanael Santos" class="speaker-img">
+                    <img src="natanael.png" alt="Pr. Natanael Santos" class="speaker-img">
                     <h3 class="speaker-name">Pr. Natanael Santos</h3>
                     <p class="speaker-role">Barretos / SP</p>
                 </div>
                 <!-- Preletor 2 -->
                 <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150" alt="Pr. Lauri Franco Villas Bôas" class="speaker-img">
+                    <img src="lauri.png" alt="Pr. Lauri Franco Villas Bôas" class="speaker-img">
                     <h3 class="speaker-name">Pr. Lauri Franco</h3>
                     <p class="speaker-role">Rio de Janeiro / RJ</p>
-                </div>
-                <!-- Preletor 3 -->
-                <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150" alt="Pr. Simão Bilek Jr" class="speaker-img">
-                    <h3 class="speaker-name">Pr. Simão Bilek Jr</h3>
-                    <p class="speaker-role">Vice Presidente</p>
-                </div>
-                <!-- Preletor 4 -->
-                <div class="speaker-card">
-                    <img src="https://via.placeholder.com/150" alt="Pr. Simão Bilek" class="speaker-img">
-                    <h3 class="speaker-name">Pr. Simão Bilek</h3>
-                    <p class="speaker-role">Pastor Presidente</p>
                 </div>
             </div>
         </div>
@@ -398,14 +413,30 @@
         </div>
     </section>
 
+    <!-- SEÇÃO COMO CHEGAR -->
+    <section class="location-section">
+        <div class="container">
+            <h2 class="section-title">Como Chegar</h2>
+            <p class="location-address">
+                <i class="fa-solid fa-location-dot" style="color: var(--accent-cyan);"></i> 
+                <strong>Assembleia de Deus Guaratuba</strong> - Av. Damião Botelho de Souza, 565 - Guaratuba / PR
+            </p>
+
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3587.2345821034!2d-48.5835!3d-25.8825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDUyJzU3LjAiUyA0OMKwMzUnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <a href="https://www.google.com/search?q=assembleia+de+Deus+Guaratuba&oq=assembleia+de+Deus+Guaratuba&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIHCAQQABjvBTIHCAUQABjvBdIBCDk0MDdqMGo3qAIIsAIB8QU6sXm7QgQP6w&sourceid=chrome&source=chrome.ob&ie=UTF-8#sv=CAwSqgIKBmxjbF9wdhI-CgNwdnESN0NnMHZaeTh4TVc0emVGOTVlakp0SWhnS0VtRnpjMlZ0WW14bGFXRWdaR1VnWkdWMWN4QUNHQU0SlAEKA2xxaRKMAUNoeGhjM05sYldKc1pXbGhJR1JsSUdSbGRYTWdaM1ZoY21GMGRXSmhTTlB3LTgtUHRJQ0FDRm8yRUFBUUFSQUNHQUFZQVJnQ0dBTWlIR0Z6YzJWdFlteGxhV0VnWkdVZ1pHVjFjeUJuZFdGeVlYUjFZbUVxQ0FnQ0VBQVFBUkFDa2dFR1kyaDFjbU5vEhIKA3RicxILbHJmOiEzc0lBRT0SIQoBcRIcYXNzZW1ibGVpYSBkZSBkZXVzIGd1YXJhdHViYRoSbG9jYWwtcGxhY2Utdmlld2ViewerGAogwfzNlgU" target="_blank" class="btn btn-social">
+                    <i class="fa-solid fa-map-location-dot" style="color: var(--accent-cyan);"></i> Abrir no Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <div class="info-location">
-                <i class="fa-solid fa-location-dot" style="color: var(--accent-cyan);"></i>
-                <span>Av. Damião Botelho de Souza, 565 - Guaratuba / PR</span>
-            </div>
-            
             <p>Assembleia de Deus Guaratuba - PR</p>
 
             <div class="org-logos">
