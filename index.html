@@ -46,11 +46,14 @@
             padding: 0 20px;
         }
 
-        /* --- HEADER / HERO SECTION COM IMAGEM DE FUNDO --- */
+        /* --- HEADER / HERO SECTION COM IMAGEM DE FUNDO E ESPAÇAMENTO AJUSTADO --- */
         header {
-            padding: 60px 0 40px;
+            /* Garante que o conteúdo fique abaixo do logo/data da arte */
+            padding-top: 280px; 
+            padding-bottom: 60px;
             text-align: center;
-            background: url('site.png') no-repeat center top / cover;
+            background: linear-gradient(to bottom, rgba(10, 31, 68, 0.1), rgba(10, 31, 68, 0.8)), 
+                        url('site.png') no-repeat center top / cover;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -58,18 +61,11 @@
             position: relative;
         }
 
-        .hero-banner-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 25px;
-            width: 100%;
-        }
-
         /* --- VIDEO CONTAINER (YOUTUBE EMBED) --- */
         .video-section {
-            margin: 30px auto 40px;
-            max-width: 850px;
+            margin: 0 auto 35px;
+            width: 100%;
+            max-width: 780px;
         }
 
         .video-wrapper {
@@ -78,8 +74,9 @@
             height: 0;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            background: #000;
         }
 
         .video-wrapper iframe {
@@ -98,7 +95,7 @@
             align-items: center;
             gap: 15px;
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .btn {
@@ -297,20 +294,19 @@
         }
 
         @media (max-width: 768px) {
-            header { padding: 40px 0 20px; }
+            header { padding-top: 200px; }
             .form-container { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION COM FUNDO SITE.PNG -->
+    <!-- HERO SECTION -->
     <header>
         <div class="container">
-            <!-- VÍDEO DO YOUTUBE (NÃO LISTADO) -->
+            <!-- VÍDEO DO YOUTUBE -->
             <div class="video-section">
                 <div class="video-wrapper">
-                    <!-- Substitua 'SEU_VIDEO_ID_AQUI' pelo ID do seu vídeo não listado no YouTube -->
                     <iframe src="https://www.youtube-nocookie.com/embed/SEU_VIDEO_ID_AQUI" title="Vídeo de Apresentação" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
