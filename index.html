@@ -46,10 +46,16 @@
             padding: 0 20px;
         }
 
-        /* --- HEADER / HERO SECTION --- */
+        /* --- HEADER / HERO SECTION COM IMAGEM DE FUNDO --- */
         header {
-            padding: 40px 0 20px;
+            padding: 60px 0 40px;
             text-align: center;
+            background: url('site.png') no-repeat center top / cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
         .hero-banner-wrapper {
@@ -58,22 +64,6 @@
             align-items: center;
             margin-bottom: 25px;
             width: 100%;
-        }
-
-        .hero-banner-img {
-            max-width: 100%;
-            width: auto;
-            max-height: 80vh; /* Garante que a imagem inteira caiba na tela sem cortar o topo/base */
-            height: auto;
-            object-fit: contain; /* Exibe a imagem completa sem recortes */
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-banner-img:hover {
-            transform: scale(1.02);
         }
 
         /* --- VIDEO CONTAINER (YOUTUBE EMBED) --- */
@@ -307,21 +297,16 @@
         }
 
         @media (max-width: 768px) {
-            .hero-banner-img { max-height: 60vh; }
+            header { padding: 40px 0 20px; }
             .form-container { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION COM FUNDO SITE.PNG -->
     <header>
         <div class="container">
-            <!-- ARTE / IMAGEM OFICIAL DA CONFERÊNCIA -->
-            <div class="hero-banner-wrapper">
-                <img src="FOTO DE PERFIL - sem fundo - nova.png" alt="Conferência Bíblica Ensinai 2K26 - De 08 a 11 de Setembro" class="hero-banner-img">
-            </div>
-
             <!-- VÍDEO DO YOUTUBE (NÃO LISTADO) -->
             <div class="video-section">
                 <div class="video-wrapper">
