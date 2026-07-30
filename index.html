@@ -8,7 +8,7 @@
     <!-- Fonts Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
     
     <!-- FontAwesome para Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -48,56 +48,34 @@
 
         /* --- HEADER / HERO SECTION --- */
         header {
-            padding: 30px 0;
+            padding: 40px 0 20px;
             text-align: center;
         }
 
-        .badge-date {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--accent-cyan);
-            color: var(--accent-cyan);
-            padding: 8px 24px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+        .hero-banner-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
         }
 
-        .logo-title {
-            text-transform: uppercase;
-            font-weight: 900;
-            font-size: 2.8rem;
-            line-height: 1.1;
-            letter-spacing: -1px;
-            margin-bottom: 5px;
+        .hero-banner-img {
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: transform 0.3s ease;
         }
 
-        .logo-title span.ensinai {
-            font-family: 'Caveat', cursive;
-            color: var(--accent-orange);
-            font-size: 4rem;
-            text-transform: none;
-            display: inline-block;
-            margin-left: 5px;
-            transform: rotate(-3deg);
-        }
-
-        .theme-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-top: 15px;
-            font-weight: 600;
+        .hero-banner-img:hover {
+            transform: scale(1.02);
         }
 
         /* --- VIDEO CONTAINER (YOUTUBE EMBED) --- */
         .video-section {
-            margin: 40px auto;
+            margin: 30px auto 40px;
             max-width: 850px;
         }
 
@@ -326,9 +304,7 @@
         }
 
         @media (max-width: 768px) {
-            .logo-title { font-size: 2rem; }
-            .logo-title span.ensinai { font-size: 3rem; }
-            .badge-date { font-size: 0.9rem; }
+            .hero-banner-img { max-width: 90%; }
             .form-container { padding: 25px; }
         }
     </style>
@@ -338,14 +314,10 @@
     <!-- HERO SECTION -->
     <header>
         <div class="container">
-            <div class="badge-date">De 08 a 11 de Setembro</div>
-            
-            <h1 class="logo-title">
-                Conferência Bíblica <br>
-                2K26 <span class="ensinai">Ensinai</span>
-            </h1>
-            
-            <p class="theme-subtitle">Tema: Uma igreja preparada para permanecer</p>
+            <!-- ARTE / IMAGEM OFICIAL DA CONFERÊNCIA -->
+            <div class="hero-banner-wrapper">
+                <img src="CBE 2026 - FOTO DE PERFIL PARA INSTAGRAM - PNG.png" alt="Conferência Bíblica Ensinai 2K26 - De 08 a 11 de Setembro" class="hero-banner-img">
+            </div>
 
             <!-- VÍDEO DO YOUTUBE (NÃO LISTADO) -->
             <div class="video-section">
@@ -463,3 +435,6 @@
 
 </body>
 </html>
+```eof
+
+A imagem oficial da conferência (`CBE 2026 - FOTO DE PERFIL PARA INSTAGRAM - PNG.png`) agora substitui o texto inicial no topo da página, ficando centralizada e com visual elegante sobre o vídeo!
